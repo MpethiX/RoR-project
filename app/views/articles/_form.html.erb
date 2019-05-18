@@ -8,7 +8,7 @@
                 <%= f.label :Titel %> 
                 </div>
                 <div class="col-sm-8">
-                    <%= f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true %>
+                    <%= f.text_field :title, class: "form-control", placeholder: "Titel", autofocus: true %>
                     </div>
                     </div>
                     <div class="form-group">
@@ -16,7 +16,7 @@
            <%= f.label :Beschreibung %>
            </div>
            <div class="col-sm-8">
-            <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Body of article" %>
+            <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Textfeld" %>
             </div>
         </div>
         <div class="form-group">
@@ -27,7 +27,7 @@
         
         <% end %>
         <div class="col-xs-4 col-xs-offset-4">
-        [ <%= link_to "Cancel request and return to articles listing", articles_path %> ]
+        [ <%= link_to "Abbrechen und zurück zur Übersicht", articles_path %> ]
         </div>
     </div>
 </div>

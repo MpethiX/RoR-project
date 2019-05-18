@@ -24,7 +24,7 @@ def create
 
 if @article.save
 
-flash[:success] = "Article was successfully created"
+flash[:success] = "Artikel erfolgreich erstellt"
 
 redirect_to article_path(@article)
 
@@ -40,7 +40,7 @@ def update
 
 if @article.update(article_params)
 
-flash[:success] = "Article was successfully updated"
+flash[:success] = "Artikel erfolgreich bearbeitet"
 
 redirect_to article_path(@article)
 
@@ -60,7 +60,7 @@ def destroy
 
 @article.destroy
 
-flash[:danger] = "Article was successfully deleted"
+flash[:danger] = "Artikel erfolgreich gelöscht"
 
 redirect_to articles_path
 
