@@ -5,7 +5,7 @@
         <%= form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f| %>
         <div class="form-group">
             <div class="control-label col-sm-2">
-                <%= f.label :title %> 
+                <%= f.label :Titel %> 
                 </div>
                 <div class="col-sm-8">
                     <%= f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true %>
@@ -13,7 +13,7 @@
                     </div>
                     <div class="form-group">
             <div class="control-label col-sm-2">
-           <%= f.label :description %>
+           <%= f.label :Beschreibung %>
            </div>
            <div class="col-sm-8">
             <%= f.text_area :description, rows: 10, class: "form-control", placeholder: "Body of article" %>
