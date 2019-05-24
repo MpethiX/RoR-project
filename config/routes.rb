@@ -4,4 +4,7 @@ Rails.application.routes.draw do
  get 'pages/index' => 'pages#index'
   get 'pages/about' => 'pages#about'
   resources :articles
+  get 'signup', to: 'users#new'
+ # post 'users' => 'users#create'
+  resources :users, except: [:new]
 end
