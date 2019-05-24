@@ -2,43 +2,43 @@
 
 <div class="row">
 
-<div class="col-xs-8 col-xs-offset-2">
+    <div class="col-xs-8 col-xs-offset-2">
 
-<div class="well well-lg">
+        <div class="well well-lg">
 
-<div class="article-title">
+            <div class="article-title">
 
-<%= link_to article.title, article_path(article) %>
+            <%= link_to article.title, article_path(article) %>
 
-</div>
+            </div>
 
-<div class="article-body">
+            <div class="article-body">
 
-<%= truncate(article.description, length: 100) %>
-<div class="article-meta-details">
-    <small>Created by: <%= article.user.username if article.user %>
+            <%= truncate(article.description, length: 100) %>
+                <div class="article-meta-details">
+                    <small>Created by: <%= article.user.username if article.user %>
                         <%= time_ago_in_words(article.created_at) %> ago,
                         last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
-</div>
+                </div>
                         
 
-</div>
+            </div>
+            <% if logged_in? && current_user == article.user %>
+                <div class="article-actions">
 
-<div class="article-actions">
+                    <%= link_to "Artikel bearbeiten", edit_article_path(article), class: "btn btn-xs btn-primary" %>
 
-<%= link_to "Artikel bearbeiten", edit_article_path(article), class: "btn btn-xs btn-primary" %>
+                    <%= link_to "Artikel Löschen", article_path(article), method: :delete,
 
-<%= link_to "Artikel Löschen", article_path(article), method: :delete,
+                    data: { confirm: "Artikel permanent löschen?"},
 
-data: { confirm: "Artikel permanent löschen?"},
+                    class: "btn btn-xs btn-danger" %>
 
-class: "btn btn-xs btn-danger" %>
+                </div>
+            <% end %>
+        </div>
 
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
